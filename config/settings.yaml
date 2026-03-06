@@ -1,0 +1,91 @@
+# ──────────────────────────────────────────────────────────────
+# AI Customer Chatbot — Configuration
+# ──────────────────────────────────────────────────────────────
+# Set the active provider below and fill in the corresponding
+# section under `providers`. All other sections are ignored.
+# Supported providers:
+#   ibm_watson | dialogflow | aws_lex | openai | anthropic | ollama
+# ──────────────────────────────────────────────────────────────
+
+chatbot:
+  # ← Change this to switch providers
+  provider: ollama
+
+  # Business identity (shown in chat UI and emails)
+  business_name: "My Business"
+  bot_name: "Aria"
+  welcome_message: "Hi! I'm Aria, your virtual assistant. How can I help you today?"
+
+  # Keywords that trigger an email notification to the business owner
+  email_trigger_keywords:
+    - "book"
+    - "appointment"
+    - "order"
+    - "complaint"
+    - "refund"
+    - "callback"
+    - "urgent"
+
+  # System prompt used by AI providers (openai / anthropic / ollama)
+  system_prompt: |
+    You are a friendly and professional customer service assistant for {business_name}.
+    Help customers with enquiries, bookings, complaints, product questions, and general support.
+    Be concise, polite, and helpful. If you cannot answer something, offer to escalate to a human agent.
+    Always confirm important details (dates, names, contact info) before finalising any booking or request.
+
+# ──────────────────────────────────────────────────────────────
+# Email Notifications
+# ──────────────────────────────────────────────────────────────
+email:
+  enabled: false                    # Set to true to activate
+  smtp_host: smtp.gmail.com
+  smtp_port: 587
+  sender: your-email@gmail.com
+  app_password: YOUR_APP_PASSWORD   # Gmail App Password (not your main password)
+  recipient: owner@yourbusiness.com # Where enquiries are sent
+
+# ──────────────────────────────────────────────────────────────
+# Cloud Provider Credentials
+# (Only fill in the section matching your chosen provider)
+# ──────────────────────────────────────────────────────────────
+
+providers:
+
+  # ── IBM Watson Assistant ──────────────────────────────────
+  ibm_watson:
+    api_key: YOUR_IBM_API_KEY
+    service_url: https://api.us-south.assistant.watson.cloud.ibm.com
+    assistant_id: YOUR_ASSISTANT_ID
+
+  # ── Google Dialogflow ES ─────────────────────────────────
+  dialogflow:
+    project_id: your-gcp-project-id
+    credentials_path: config/google-credentials.json
+    language: en
+
+  # ── AWS Lex V2 ───────────────────────────────────────────
+  aws_lex:
+    region: us-east-1
+    access_key: YOUR_AWS_ACCESS_KEY
+    secret_key: YOUR_AWS_SECRET_KEY
+    bot_id: YOUR_BOT_ID
+    bot_alias_id: YOUR_BOT_ALIAS_ID
+    locale_id: en_US
+
+  # ── OpenAI (GPT-4 / GPT-3.5) ────────────────────────────
+  openai:
+    api_key: YOUR_OPENAI_API_KEY
+    model: gpt-4o-mini            # or gpt-4, gpt-3.5-turbo
+    system_prompt: ""             # Leave blank to use chatbot.system_prompt
+
+  # ── Anthropic Claude ─────────────────────────────────────
+  anthropic:
+    api_key: YOUR_ANTHROPIC_API_KEY
+    model: claude-3-haiku-20240307
+    system_prompt: ""             # Leave blank to use chatbot.system_prompt
+
+  # ── Ollama (Local / Free) ────────────────────────────────
+  ollama:
+    base_url: http://localhost:11434
+    model: llama3                 # or mistral, qwen2, phi3, gemma2 etc.
+    system_prompt: ""             # Leave blank to use chatbot.system_prompt

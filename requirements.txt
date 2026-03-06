@@ -1,0 +1,24 @@
+flask>=3.0.0
+flask-cors>=4.0.0
+pyyaml>=6.0.1
+requests>=2.31.0
+
+# ── Uncomment for your chosen provider ──────────────────────
+
+# IBM Watson
+# ibm-watson>=7.0.0
+# ibm-cloud-sdk-core>=3.18.0
+
+# Google Dialogflow
+# google-cloud-dialogflow>=2.24.0
+
+# AWS Lex
+# boto3>=1.34.0
+
+# OpenAI
+# openai>=1.30.0
+
+# Anthropic Claude
+# anthropic>=0.28.0
+
+# Ollama (local) — no extra package needed, uses requests
