@@ -7,7 +7,7 @@ A **business-independent**, cloud-flexible AI chatbot for handling customer quer
 ************************************************************************************************************
 
 -------------------------------------------------------------------------------------------------------------
-<img src="https://raw.githubusercontent.com/harsha-andra/Ai-Customer_service-Chatbot/docs/demo-2.gif" alt="Demo">
+<img src="https://github.com/harsha-andra/AI-Customer-Service-Chatbot/blob/main/docs/demo-2.gif" alt="Demo">
 -------------------------------------------------------------------------------------------------------------
 
 ## ✨ Features
