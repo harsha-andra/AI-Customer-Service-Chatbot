@@ -3,11 +3,11 @@
 A **business-independent**, cloud-flexible AI chatbot for handling customer queries, appointments, complaints, and support — deployable with **6 different AI providers** in minutes.
 
 ************************************************************************************************************
-<img src="docs/demo.gif" alt="Demo">
+<img src="https://raw.githubusercontent.com/harsha-andra/Ai-Customer_service-Chatbot/docs/demo.gif" alt="Demo">
 ************************************************************************************************************
 
 -------------------------------------------------------------------------------------------------------------
-<img src="docs/demo-2.gif" alt="Demo">
+<img src="[docs/demo-2.gif](https://raw.githubusercontent.com/harsha-andra/Ai-Customer_service-Chatbot/docs/demo-2.gif)" alt="Demo">
 -------------------------------------------------------------------------------------------------------------
 
 ## ✨ Features
