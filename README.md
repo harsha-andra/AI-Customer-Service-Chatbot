@@ -3,7 +3,7 @@
 A **business-independent**, cloud-flexible AI chatbot for handling customer queries, appointments, complaints, and support — deployable with **6 different AI providers** in minutes.
 
 ************************************************************************************************************
-<img src="https://raw.githubusercontent.com/harsha-andra/Stock_Price-Prediction-Time-Series-/main/Screenshots/Tesla.png" alt="Tesla" />
+https://github.com/harsha-andra/AI-Customer-Service-Chatbot/blob/main/docs/demo.gif" alt="Demo"
 ************************************************************************************************************
 
 -------------------------------------------------------------------------------------------------------------
